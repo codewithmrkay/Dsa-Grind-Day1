@@ -24,7 +24,7 @@ Today i build custome Arrray , I've got the basics down on how to:
 * **Search** for specific items within the collection.
 ---
 
-*[See the Main Java Code](https://github.com/codewithmrkay/Dsa-Grind-Day1/Main.java)
+*[See the Main Java Code](https://github.com/codewithmrkay/Dsa-Grind-Day1/blob/main/MyArray.java)
 
 ---
 ## 1-List-in-Java☕
