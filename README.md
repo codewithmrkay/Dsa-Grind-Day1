@@ -6,7 +6,7 @@ Welcome to Day 1 of my Data Structures and Algorithms (DSA) grind! Here, I'll be
 
 ## Table of Contents 📖
 
-* [1. List in Java](#1-list-in-java)
+* [1. List in Java](#list-in-java)
 * [2. Eg in Java](#Example)
 
 ---
