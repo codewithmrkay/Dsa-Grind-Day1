@@ -7,10 +7,11 @@ Welcome to Day 1 of my Data Structures and Algorithms (DSA) grind! Here, I'll be
 ## Table of Contents 📖
 
 * [1. List in Java](#1-list-in-java)
+* [2. Eg in Java](#Example)
 
 ---
 
-## 1. List in Java ☕
+## 1.List in Java ☕
 
 ### What is a List?
 
@@ -21,6 +22,8 @@ Crucially, `List` is an **interface**. This means it defines a set of behaviors 
 ### Why use a List instead of an Array?
 
 While both store ordered elements, the `List` shines because of its **dynamic nature**. You don't need to manually resize it, and it comes with many built-in methods that simplify common operations like adding, removing, or checking for elements.
+
+## Example
 
 ### Simple Example: `ArrayList` with Integers
 
