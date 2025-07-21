@@ -7,7 +7,7 @@ Welcome to Day 1 of my Data Structures and Algorithms (DSA) grind! Here, I'll be
 ## Table of Contents 📖
 
 * [1. List in Java](#1-List-in-Java)
-* [2. How ](#2-WorkingBoi)
+* [2. How it Works Boi ](#2-Working-Boi)
 * [3. List Example](#3-Example)
 
 ---
@@ -24,7 +24,7 @@ A **`List`** in Java is an **ordered collection** of elements that is **dynamic 
 While both store ordered elements, the `List` shines because of its **dynamic nature**. You don't need to manually resize it, and it comes with many built-in methods that simplify common operations like adding, removing, or checking for elements.
 
 ---
-## 2-WorkingBoi✨
+## 2-Working-Boi✨
 ### How `ArrayList` Grows Dynamically (The Magic Behind the Scenes) 
 
 An `ArrayList` isn't magic, but it *feels* like it because it handles resizing for you! Internally, an `ArrayList` is actually backed by a regular **Java array**.
