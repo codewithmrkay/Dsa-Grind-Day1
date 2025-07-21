@@ -6,7 +6,7 @@ Welcome to Day 1 of my Data Structures and Algorithms (DSA) grind! Here, I'll be
 
 ## Table of Contents 📖
 
-* [1. List in Java](#What-I-Learned-Today)
+* [1. What I Learn 🗿](#What-I-Learned-Today)
 * [1. List in Java](#1-List-in-Java)
 * [2. How it Works Boi ](#2-Working-Boi)
 * [3. List Example](#3-Example)
