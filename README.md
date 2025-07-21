@@ -8,7 +8,7 @@ Welcome to Day 1 of my Data Structures and Algorithms (DSA) grind! Here, I'll be
 
 * [1. What I Learn 🗿](#What-I-Learned-Today)
 * [1. List in Java](#1-List-in-Java)
-* [2. How it Works Boi ](#2-Working-Boi)
+* [2. How it Works Boi ](#2-How-it-Work-Boi)
 * [3. List Example](#3-Example)
 
 ---
@@ -39,25 +39,7 @@ A **`List`** in Java is an **ordered collection** of elements that is **dynamic 
 While both store ordered elements, the `List` shines because of its **dynamic nature**. You don't need to manually resize it, and it comes with many built-in methods that simplify common operations like adding, removing, or checking for elements.
 
 ---
-## 2-Working-Boi✨
-### How `ArrayList` Grows Dynamically (The Magic Behind the Scenes) 
-
-An `ArrayList` isn't magic, but it *feels* like it because it handles resizing for you! Internally, an `ArrayList` is actually backed by a regular **Java array**.
-
-1.  **Initial Capacity**: When you create an `ArrayList`, it starts with a default initial capacity (usually 10 elements for an `ArrayList<>()`). This means it internally creates an array of size 10.
-2.  **Adding Elements**: As you `add()` elements, they are stored in this internal array.
-3.  **Resizing**: When the internal array becomes full (i.e., you try to add the 11th element to a list with capacity 10), the `ArrayList` does the following:
-    * It creates a **new, larger array** (typically 1.5 times the size of the old array, plus one).
-    * It **copies all the existing elements** from the old, full array into this new, larger array.
-    * The old, smaller array is then garbage collected.
-    * The new element is added to the newly sized array.
-
----
-
-## 3-Example
-
----
-## 2-Working-Boi✨
+## 2-How-it-Work-Boi✨
 ### How `ArrayList` Grows Dynamically (The Magic Behind the Scenes) 
 
 An `ArrayList` isn't magic, but it *feels* like it because it handles resizing for you! Internally, an `ArrayList` is actually backed by a regular **Java array**.
