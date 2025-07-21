@@ -6,79 +6,95 @@ Welcome to Day 1 of my Data Structures and Algorithms (DSA) grind! Here, I'll be
 
 ## Table of Contents 📖
 
-* [1. List in Java](#1-list-in-java)
+* [1. List in Java](#What-I-Learned-Today)
+* [1. List in Java](#1-List-in-Java)
+* [2. How it Works Boi ](#2-Working-Boi)
+* [3. List Example](#3-Example)
 
 ---
+## What-I-Learned-Today🧠
 
-## 1. List in Java ☕
+### Building My Own Dynamic Array (aka Mastering `List` & `ArrayList`)
+
+Today i build custome Arrray , I've got the basics down on how to:
+
+* **Create** these dynamic arrays from scratch.
+* **Insert** new elements precisely where they're needed.
+* **Print/Access** any element by its position.
+* **Search** for specific items within the collection.
+---
+
+*[See the Main Java Code](https://github.com/codewithmrkay/Dsa-Grind-Day1/Main.java)
+
+---
+## 1-List-in-Java☕
 
 ### What is a List?
 
-A **`List`** in Java is an **ordered collection** of elements that is **dynamic in size**. Think of it as a super-flexible container that remembers the order you put things in. Unlike fixed-size arrays, a `List` can automatically grow or shrink as you add or remove items, making it incredibly convenient for managing collections where the number of elements might change. It also happily allows **duplicate elements**.
-
-Crucially, `List` is an **interface**. This means it defines a set of behaviors (like `add()`, `remove()`, `get()`, `size()`) that different "flavors" of lists, such as `ArrayList` or `LinkedList`, must implement.
+A **`List`** in Java is an **ordered collection** of elements that is **dynamic in size**. `List` can automatically grow or shrink as you add or remove items. It also happily allows **duplicate elements**.
 
 ### Why use a List instead of an Array?
 
 While both store ordered elements, the `List` shines because of its **dynamic nature**. You don't need to manually resize it, and it comes with many built-in methods that simplify common operations like adding, removing, or checking for elements.
+
+---
+## 2-Working-Boi✨
+### How `ArrayList` Grows Dynamically (The Magic Behind the Scenes) 
+
+An `ArrayList` isn't magic, but it *feels* like it because it handles resizing for you! Internally, an `ArrayList` is actually backed by a regular **Java array**.
+
+1.  **Initial Capacity**: When you create an `ArrayList`, it starts with a default initial capacity (usually 10 elements for an `ArrayList<>()`). This means it internally creates an array of size 10.
+2.  **Adding Elements**: As you `add()` elements, they are stored in this internal array.
+3.  **Resizing**: When the internal array becomes full (i.e., you try to add the 11th element to a list with capacity 10), the `ArrayList` does the following:
+    * It creates a **new, larger array** (typically 1.5 times the size of the old array, plus one).
+    * It **copies all the existing elements** from the old, full array into this new, larger array.
+    * The old, smaller array is then garbage collected.
+    * The new element is added to the newly sized array.
+
+---
+
+## 3-Example
 
 ### Simple Example: `ArrayList` with Integers
 
 Here's an example using `ArrayList`, a common implementation of the `List` interface, to store `Integer` values.
 
 ```java
-import java.util.ArrayList; // Don't forget to import ArrayList
-import java.util.List;    // It's good practice to refer to it as the List interface
+```java
+import java.util.ArrayList;
+import java.util.List;
 
-public class SimpleArrayListExample {
+public class CoreArrayListOperations {
 
     public static void main(String[] args) {
-        // 1. Creating a List
-        // We declare it as a List interface type, but instantiate it as an ArrayList
-        List<Integer> numbers = new ArrayList<>();
-        System.out.println("Initial List: " + numbers); // Output: Initial List: []
+        // 1. Creation and Adding Elements
+        List<String> planets = new ArrayList<>();
+        planets.add("Mercury");
+        planets.add("Venus");
+        planets.add("Earth");
+        System.out.println("Planets: " + planets); // Output: Planets: [Mercury, Venus, Earth]
 
-        // 2. Adding elements to the List
-        numbers.add(10);    // Adds 10 at index 0
-        numbers.add(20);    // Adds 20 at index 1
-        numbers.add(5);     // Adds 5 at index 2
-        numbers.add(20);    // Adds another 20 (duplicates are allowed!) at index 3
-        System.out.println("After adding elements: " + numbers); // Output: After adding elements: [10, 20, 5, 20]
+        // 2. Accessing by Index
+        String secondPlanet = planets.get(1);
+        System.out.println("Second planet: " + secondPlanet); // Output: Second planet: Venus
 
-        // 3. Getting an element by its index
-        int firstElement = numbers.get(0); // Gets the element at index 0
-        System.out.println("First element: " + firstElement); // Output: First element: 10
+        // 3. Getting Size
+        int count = planets.size();
+        System.out.println("Number of planets: " + count); // Output: Number of planets: 3
 
-        // 4. Getting the size of the List
-        int size = numbers.size();
-        System.out.println("Number of elements: " + size); // Output: Number of elements: 4
+        // 4. Removing an Element (by value)
+        planets.remove("Venus");
+        System.out.println("After removing Venus: " + planets); // Output: After removing Venus: [Mercury, Earth]
 
-        // 5. Removing an element
-        // You can remove by value (first occurrence) or by index
-        numbers.remove(Integer.valueOf(20)); // Removes the first '20' encountered
-        System.out.println("After removing first 20: " + numbers); // Output: After removing first 20: [10, 5, 20]
-
-        numbers.remove(0); // Removes the element at index 0 (which is now 10)
-        System.out.println("After removing element at index 0: " + numbers); // Output: After removing element at index 0: [5, 20]
-
-        // 6. Checking if the List contains an element
-        boolean containsFive = numbers.contains(5);
-        System.out.println("Does list contain 5? " + containsFive); // Output: Does list contain 5? true
-
-        // 7. Iterating through the List
-        System.out.println("Elements in the list:");
-        for (int num : numbers) { // Enhanced for-loop (for-each loop)
-            System.out.println("- " + num);
+        // 5. Iterating
+        System.out.println("Remaining planets:");
+        for (String planet : planets) {
+            System.out.println("- " + planet);
         }
         /* Output:
-           Elements in the list:
-           - 5
-           - 20
+           Remaining planets:
+           - Mercury
+           - Earth
         */
-
-        // 8. Clearing the List
-        numbers.clear();
-        System.out.println("After clearing the list: " + numbers); // Output: After clearing the list: []
-        System.out.println("Is list empty? " + numbers.isEmpty()); // Output: Is list empty? true
     }
 }
